@@ -38,7 +38,7 @@ func MustAuth(handler http.Handler) http.Handler {
 func loginHandler(w http.ResponseWriter, r *http.Request) {
 	segs := strings.Split(r.URL.Path, "/")
 	action := segs[2]
-	provder := segs[3]
+	provider := segs[3]
 	switch action {
 	case "login":
 		log.Println("TODO handle login for", provider)
